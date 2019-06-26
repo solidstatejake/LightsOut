@@ -14,6 +14,11 @@ function generateSquareIdArray() {
   return squareIdArray;
 }
 
+function coordinatesToId(coordinates){
+  return coordinates[0] * 5 + coordinates[1];
+
+}
+
 function flipSquare(currentState, squareCoordinates) {
   const rowIndex = 0, columnIndex = 1;
   return currentState.squareStates.map((squareStatesRow, squareStatesRowIndex) => {
@@ -25,6 +30,14 @@ function flipSquare(currentState, squareCoordinates) {
           : !squareStatesColumn
       })
   })
+  //POSSIBLE REFACTOR MODUS
+  // let contigArr = currentState.squareStates.flat();
+  // contigArr = contigArr.map((elem, index) => {
+  //   if (index === coordinatesToId(squareCoordinates)){
+  //     return !elem;
+  //   } else return elem;
+  // });
+  // return contigArr;
 }
 
 function flipSiblings(currentState, squareCoordinates) {
@@ -33,6 +46,9 @@ function flipSiblings(currentState, squareCoordinates) {
 
     if (squareStatesRowIndex === squareCoordinates[ rowIndex ]) {
 
+      if (currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ] !== undefined) {
+        currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ][ squareCoordinates[ columnIndex ] ] = !currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ][ squareCoordinates[ columnIndex ] ];
+      }
       if (squareStatesRow[ squareCoordinates[ columnIndex ] + 1 ] !== undefined) {
         squareStatesRow[ squareCoordinates[ columnIndex ] + 1 ] = !squareStatesRow[ squareCoordinates[ columnIndex ] + 1 ];
       }
@@ -42,13 +58,11 @@ function flipSiblings(currentState, squareCoordinates) {
       if (currentState.squareStates[ squareCoordinates[ rowIndex ] + 1 ] !== undefined) {
         currentState.squareStates[ squareCoordinates[ rowIndex ] + 1 ][ squareCoordinates[ columnIndex ] ] = !currentState.squareStates[ squareCoordinates[ rowIndex ] + 1 ][ squareCoordinates[ columnIndex ] ];
       }
-      if (currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ] !== undefined) {
-        currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ][ squareCoordinates[ columnIndex ] ] = !currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ][ squareCoordinates[ columnIndex ] ];
-      }
     }
     return squareStatesRow;
   })
 }
+
 
 
 export { generateSquareStateArray, generateSquareIdArray, flipSquare, flipSiblings };

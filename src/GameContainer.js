@@ -14,21 +14,31 @@ class GameContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      squareStates: generateSquareStateArray(false)
+      squareStates: generateSquareStateArray(true),
+      gameOver: false
     };
 
     this.updateSquareStates = this.updateSquareStates.bind(this);
+    this.checkGameOver = this.checkGameOver.bind(this);
   }
 
+  // Note that checkGameOver() is being thrown as callback function to second setState
+  // to ensure that game ends on final click.
   updateSquareStates(squareCoordinates) {
     this.setState(currentState => ({
       squareStates: flipSquare(currentState, squareCoordinates)
     }));
     this.setState(currentState => ({
       squareStates: flipSiblings(currentState, squareCoordinates)
-    }));
+    }), () => this.checkGameOver());
   }
 
+  checkGameOver() {
+    if (this.state.gameOver === false && this.state.squareStates.flat().every((x => x === false)) ) {
+      this.setState(currentState => ({ gameOver: true }));
+    }
+
+  }
 
   render() {
     const squareCoordinatesArray = generateSquareIdArray();
@@ -39,12 +49,12 @@ class GameContainer extends Component {
             return <Square
               key={ rowIndex * 5 + colIndex }
               squareCoordinates={ squareCoordinatesArray[ rowIndex * 5 + colIndex ] }
-              updateSquareStates={ this.updateSquareStates }
               isOn={ this.state.squareStates[ rowIndex ][ colIndex ] }
+              updateSquareStates={ this.updateSquareStates }
             />
           })
-
-        }) }
+        })
+        }
       </div>
     );
   }
