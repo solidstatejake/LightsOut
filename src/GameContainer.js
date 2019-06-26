@@ -15,23 +15,47 @@ class GameContainer extends Component {
     this.switchSquare = this.switchSquare.bind(this);
   }
 
-  switchSquare(key) {
-    this.setState(currentState => ({
-      squareStates: currentState.squareStates.map((square, index) => {
-        return index === key ? !square : square;
-      })
-    }));
+  switchSquare(squareCoordinates) {
+    const rowIndex = 0, columnIndex = 1;
+    this.setState(currentState => {
+      return ({
+        squareStates: currentState.squareStates.map((squareStatesRow, squareStatesRowIndex) => {
+          return squareStatesRowIndex !== squareCoordinates[ rowIndex ]
+            ? squareStatesRow
+            : squareStatesRow.map((squareStatesColumn, squareStatesColumnIndex) => {
+              return squareStatesColumnIndex !== squareCoordinates[ columnIndex ]
+                ? squareStatesColumn
+                : !squareStatesColumn
+            })
+        }),
+      });
+    })
   }
 
+
+  // !currentState.squareStates[ id[ 0 ] ][ id[ 1 ] ],
+  // squareStates: currentState.squareStates.map((square, index) => {
+  //   console.log(square);
+  //   // [f,f,f,f,f]
+  //   return ((id[0] === square && id[1] === index) ? !square[index] :
+  // square[index]) // return index === id ? !square : square; })
+
+
+// flipSiblings(id){
+//
+//
+//  }
+//
+
   render() {
-    const squareIdArray = generateSquareIdArray();
+    const squareCoordinatesArray = generateSquareIdArray();
     return (
       <div className='GameContainer'>
         { Array.from(Array(25).keys()).map((i) => {
 
           return <Square
             key={ i }
-            squareId={ squareIdArray[i] }
+            squareCoordinates={ squareCoordinatesArray[ i ] }
             switchSquare={ this.switchSquare }
             isOn={ this.state.squareStates[ i ] }
           />

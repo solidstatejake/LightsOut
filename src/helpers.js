@@ -7,9 +7,7 @@ function generateSquareStateArray(val) {
 function generateSquareIdArray() {
   let squareIdArray = Array(25);
   for (let i = 0; i < 5; i++) {
-    console.log(`i = ${i}`);
     for (let j = 0; j < 5; j++) {
-      console.log(`j = ${j}`);
       squareIdArray[ (5 * i) + j ] = [ i, j ];
     }
   }
