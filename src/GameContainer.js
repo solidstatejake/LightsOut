@@ -51,14 +51,16 @@ class GameContainer extends Component {
     const squareCoordinatesArray = generateSquareIdArray();
     return (
       <div className='GameContainer'>
-        { Array.from(Array(25).keys()).map((i) => {
+        { generateSquareStateArray(0).map((row, rowIndex) => {
+            return row.map((col, colIndex) => {
+              return <Square
+                key={ rowIndex * 5 + colIndex }
+                squareCoordinates={ squareCoordinatesArray[ rowIndex * 5 + colIndex ] }
+                switchSquare={ this.switchSquare }
+                isOn={ this.state.squareStates[ rowIndex ][colIndex] }
+              />
+            })
 
-          return <Square
-            key={ i }
-            squareCoordinates={ squareCoordinatesArray[ i ] }
-            switchSquare={ this.switchSquare }
-            isOn={ this.state.squareStates[ i ] }
-          />
         }) }
       </div>
     );
