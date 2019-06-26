@@ -3,18 +3,22 @@ import './sass/main.scss';
 
 class Square extends Component {
 
-  static defaultProps = {};
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     isOn: this.props.isOn,
+  //   };
+  // }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOn: false
-    };
+  handleSwitchSquare() {
+    this.props.switchSquare(this.props.key);
   }
 
   render() {
     return (
-      <div className="Square">
+      <div onClick={this.props.switchSquare}
+           className={`Square ${this.props.isOn ? 'Square--is-on' : 'Square--is-off'}`}
+          >
 
       </div>
     );
