@@ -1,0 +1,14 @@
+/* Abstacts */
+/* Base */
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+/* Components */
+.Square {
+  background-color: #D043BE;
+  border: 1px solid black;
+  height: 10rem;
+  width: 10rem; }
