@@ -9,8 +9,8 @@ body {
 /* Components */
 .Square {
   border: 1px solid black;
-  height: 10rem;
-  width: 10rem; }
+  height: 8rem;
+  width: 8rem; }
   .Square--is-on {
     background-color: #D043BE; }
   .Square--is-off {

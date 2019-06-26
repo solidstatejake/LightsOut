@@ -8,32 +8,33 @@ class GameContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      squareStates: [ false, false, false, false,
-                      false, false, false, false,
-                      false, false, false, false,
-                      false, false, false, false ]
+      squareStates: [ false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false, ]
     };
 
-    // this.switchSquare = this.switchSquare.bind(this);
+    this.switchSquare = this.switchSquare.bind(this);
   }
 
   switchSquare(key) {
-    this.setState(st => ({
-      squareStates: st.squareStates.map((square, index) => {
+    this.setState(currentState => ({
+      squareStates: currentState.squareStates.map((square, index) => {
         return index === key ? !square : square;
       })
-
     }));
   }
 
   render() {
     return (
       <div className='GameContainer'>
-        { Array.from(Array(16).keys()).map((i) => {
+        { Array.from(Array(25).keys()).map((i) => {
           return <Square
             key={ i }
-            switchSquare={ () => this.switchSquare(i) }
-            isOn={this.state.squareStates[i]}
+            squareId={ i }
+            switchSquare={ this.switchSquare }
+            isOn={ this.state.squareStates[ i ] }
           />
         }) }
       </div>
