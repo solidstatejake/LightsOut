@@ -14,4 +14,17 @@ function generateSquareIdArray() {
   return squareIdArray;
 }
 
-export { generateSquareStateArray, generateSquareIdArray };
+function updateSquareStates(currentState, squareCoordinates) {
+  const rowIndex = 0, columnIndex = 1;
+  return currentState.squareStates.map((squareStatesRow, squareStatesRowIndex) => {
+    return squareStatesRowIndex !== squareCoordinates[ rowIndex ]
+      ? squareStatesRow
+      : squareStatesRow.map((squareStatesColumn, squareStatesColumnIndex) => {
+        return squareStatesColumnIndex !== squareCoordinates[ columnIndex ]
+          ? squareStatesColumn
+          : !squareStatesColumn
+      })
+  })
+}
+
+export { generateSquareStateArray, generateSquareIdArray, updateSquareStates };
