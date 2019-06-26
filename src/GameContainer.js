@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Square from './Square';
-import { generateArray } from "./helpers";
+import { generateSquareStateArray, generateSquareIdArray } from "./helpers";
 import './sass/components/GameContainer.scss';
 
 class GameContainer extends Component {
@@ -9,7 +9,7 @@ class GameContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      squareStates: generateArray(false)
+      squareStates: generateSquareStateArray(false)
     };
 
     this.switchSquare = this.switchSquare.bind(this);
@@ -24,12 +24,14 @@ class GameContainer extends Component {
   }
 
   render() {
+    const squareIdArray = generateSquareIdArray();
     return (
       <div className='GameContainer'>
         { Array.from(Array(25).keys()).map((i) => {
+
           return <Square
             key={ i }
-            squareId={ i }
+            squareId={ squareIdArray[i] }
             switchSquare={ this.switchSquare }
             isOn={ this.state.squareStates[ i ] }
           />
