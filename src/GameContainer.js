@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Square from './Square';
+import { generateArray } from "./helpers";
 import './sass/components/GameContainer.scss';
 
 class GameContainer extends Component {
@@ -8,11 +9,7 @@ class GameContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      squareStates: [ false, false, false, false, false,
-                      false, false, false, false, false,
-                      false, false, false, false, false,
-                      false, false, false, false, false,
-                      false, false, false, false, false, ]
+      squareStates: generateArray(false)
     };
 
     this.switchSquare = this.switchSquare.bind(this);
