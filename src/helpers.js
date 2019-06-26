@@ -14,7 +14,7 @@ function generateSquareIdArray() {
   return squareIdArray;
 }
 
-function updateSquareStates(currentState, squareCoordinates) {
+function flipSquare(currentState, squareCoordinates) {
   const rowIndex = 0, columnIndex = 1;
   return currentState.squareStates.map((squareStatesRow, squareStatesRowIndex) => {
     return squareStatesRowIndex !== squareCoordinates[ rowIndex ]
@@ -27,4 +27,28 @@ function updateSquareStates(currentState, squareCoordinates) {
   })
 }
 
-export { generateSquareStateArray, generateSquareIdArray, updateSquareStates };
+function flipSiblings(currentState, squareCoordinates) {
+  const rowIndex = 0, columnIndex = 1;
+  return currentState.squareStates.map((squareStatesRow, squareStatesRowIndex) => {
+
+    if (squareStatesRowIndex === squareCoordinates[ rowIndex ]) {
+
+      if (squareStatesRow[ squareCoordinates[ columnIndex ] + 1 ] !== undefined) {
+        squareStatesRow[ squareCoordinates[ columnIndex ] + 1 ] = !squareStatesRow[ squareCoordinates[ columnIndex ] + 1 ];
+      }
+      if (squareStatesRow[ squareCoordinates[ columnIndex ] - 1 ] !== undefined) {
+        squareStatesRow[ squareCoordinates[ columnIndex ] - 1 ] = !squareStatesRow[ squareCoordinates[ columnIndex ] - 1 ];
+      }
+      if (currentState.squareStates[ squareCoordinates[ rowIndex ] + 1 ] !== undefined) {
+        currentState.squareStates[ squareCoordinates[ rowIndex ] + 1 ][ squareCoordinates[ columnIndex ] ] = !currentState.squareStates[ squareCoordinates[ rowIndex ] + 1 ][ squareCoordinates[ columnIndex ] ];
+      }
+      if (currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ] !== undefined) {
+        currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ][ squareCoordinates[ columnIndex ] ] = !currentState.squareStates[ squareCoordinates[ rowIndex ] - 1 ][ squareCoordinates[ columnIndex ] ];
+      }
+    }
+    return squareStatesRow;
+  })
+}
+
+
+export { generateSquareStateArray, generateSquareIdArray, flipSquare, flipSiblings };

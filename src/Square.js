@@ -9,7 +9,7 @@ class Square extends Component {
   }
 
   handleSwitchSquare() {
-    this.props.switchSquare(this.props.squareCoordinates);
+    this.props.updateSquareStates(this.props.squareCoordinates);
   }
 
   render() {
