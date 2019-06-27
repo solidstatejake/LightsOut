@@ -60,6 +60,8 @@ body {
   text-align: center;
   width: 60rem; }
   .LightsOut__header .header {
+    animation: blink 5s linear infinite alternate, blinkTwice 3s linear infinite;
+    color: #FFD9E2;
     font-family: 'neontubes';
     font-size: 7rem;
     left: 50%;
@@ -67,12 +69,11 @@ body {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    color: #ffd9e2;
-    text-shadow: 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px #ff003c, 0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c, 0 0 300px #ff003c, 0 0 500px #ff003c, 0 0 1000px #ff003c;
-    animation: blink 5s linear infinite alternate, blinkTwice 3s linear infinite; }
+    text-shadow: 0 0 0 transparent, 0 0 10px #FF003C, 0 0 20px #FF003C, 0 0 40px #FF003C, 0 0 100px #FF003C, 0 0 200px #FF003C, 0 0 300px #FF003C, 0 0 500px #FF003C, 0 0 1000px #FF003C;
+    width: 100%; }
 
 .LightsOut__game-container {
+  box-shadow: 0 0 0 transparent, 0 0 10px #D043BE, 0 0 20px #D043BE, 0 0 40px #D043BE, 0 0 100px #D043BE, 0 0 200px #D043BE, 0 0 300px #D043BE;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -82,7 +83,6 @@ body {
   transform: translate(-50%, -50%);
   top: 50%;
   width: 41rem;
-  box-shadow: 0 0 0 transparent, 0 0 10px #D043BE, 0 0 20px #D043BE, 0 0 40px #D043BE, 0 0 100px #D043BE, 0 0 200px #D043BE, 0 0 300px #D043BE;
   z-index: -1; }
 
 .GameOver {
@@ -98,12 +98,23 @@ body {
     color: white;
     font-family: 'neontubes';
     font-size: 3rem; }
+  .GameOver__main .nav__button {
+    animation: blink 5s linear infinite alternate, blinkTwice 3s linear infinite;
+    background-color: #D043BE;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 transparent, 0 0 10px #D043BE, 0 0 20px #D043BE, 0 0 40px #D043BE, 0 0 100px #D043BE, 0 0 200px #D043BE, 0 0 300px #D043BE;
+    font-family: neontubes;
+    font-size: 1.6rem;
+    height: 5rem;
+    width: 15rem; }
 
 .Square {
-  border: 1px solid black;
   height: 8rem;
   width: 8rem; }
   .Square--is-on {
-    background-color: #D043BE; }
+    background-color: #D043BE;
+    border: 1px solid #A043BE; }
   .Square--is-off {
-    background-color: whitesmoke; }
+    background-color: black;
+    border: 1px solid #1F1F1F; }

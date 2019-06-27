@@ -22,9 +22,9 @@ class GameOver extends Component {
 
         <main className="GameOver__main">
           <nav className="nav">
-            <button className="nav__button--play-again"
-                    onClick={ this.handleRestartGame }>Restart Game</button>
-            {/*<button className="nav__button--" onClick=""></button>*/}
+            <button className="nav__button"
+                    onClick={ this.handleRestartGame }>Restart Game
+            </button>
           </nav>
         </main>
 

@@ -34,9 +34,9 @@ class GameBoard extends Component {
       let y = Math.floor(Math.random() * 5);
       moves.push([ x, y ]);
     }
-    this.setState({gameStack: moves},moves.forEach(move => {
+    this.setState({ gameStack: moves }, moves.forEach(move => {
       this.updateSquareStates(move);
-    }) );
+    }));
 
   }
 
@@ -73,10 +73,9 @@ class GameBoard extends Component {
   }
 
   render() {
-    if(this.state.newGame) {
-      console.log("IM GENERATING A GAMEBOARD")
+    if (this.state.newGame) {
       this.generateGameBoard(20);
-      this.setState({newGame: false});
+      this.setState({ newGame: false });
     }
     const squareCoordinatesArray = generateSquareCoordinatesArray();
     return (
@@ -88,15 +87,15 @@ class GameBoard extends Component {
         <div className="LightsOut__game-container">
           {
             generateSquareStateArray(0).map((row, rowIndex) => {
-            return row.map((col, colIndex) => {
-              return <Square
-                key={ rowIndex * 5 + colIndex }
-                squareCoordinates={ squareCoordinatesArray[ rowIndex * 5 + colIndex ] }
-                isOn={ this.state.squareStates[ rowIndex ][ colIndex ] }
-                updateSquareStates={ this.updateSquareStates }
-              />
+              return row.map((col, colIndex) => {
+                return <Square
+                  key={ rowIndex * 5 + colIndex }
+                  squareCoordinates={ squareCoordinatesArray[ rowIndex * 5 + colIndex ] }
+                  isOn={ this.state.squareStates[ rowIndex ][ colIndex ] }
+                  updateSquareStates={ this.updateSquareStates }
+                />
+              })
             })
-          })
           }
 
         </div>

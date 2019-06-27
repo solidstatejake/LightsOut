@@ -14,8 +14,8 @@ function generateSquareCoordinatesArray() {
   return squareCoordinatesArray;
 }
 
-function coordinatesToId(coordinates){
-  return coordinates[0] * 5 + coordinates[1];
+function coordinatesToId(coordinates) {
+  return coordinates[ 0 ] * 5 + coordinates[ 1 ];
 
 }
 
@@ -64,5 +64,9 @@ function flipSiblings(currentState, squareCoordinates) {
 }
 
 
-
-export { generateSquareStateArray, generateSquareCoordinatesArray, flipSquare, flipSiblings };
+export {
+  generateSquareStateArray,
+  generateSquareCoordinatesArray,
+  flipSquare,
+  flipSiblings
+};

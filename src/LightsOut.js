@@ -6,33 +6,33 @@ class LightsOut extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      gameOver: false,
+      gameOver: true,
     };
 
     this.updateGameOver = this.updateGameOver.bind(this);
     this.restartGame = this.restartGame.bind(this);
   }
 
-  updateGameOver(){
-    this.setState({gameOver:true});
+  updateGameOver() {
+    this.setState({ gameOver: true });
   }
 
   restartGame() {
-    this.setState({gameOver:false})
+    this.setState({ gameOver: false })
   }
 
 
   render() {
     if (!this.state.gameOver) {
       return (
-        <GameBoard gameOver={this.state.gameOver}
-                   updateGameOver={this.updateGameOver}
+        <GameBoard gameOver={ this.state.gameOver }
+                   updateGameOver={ this.updateGameOver }
 
         />
       );
     } else {
       return (
-        <GameOver restartGame={this.restartGame}/>
+        <GameOver restartGame={ this.restartGame }/>
       );
     }
   }

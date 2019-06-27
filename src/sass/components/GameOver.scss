@@ -1,16 +1,35 @@
 .GameOver {
     border-radius: 70px;
-    height: 80rem;
-    left: 50%;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100rem;
+    height:        80rem;
+    left:          50%;
+    position:      absolute;
+    text-align:    center;
+    top:           50%;
+    transform:     translate(-50%, -50%);
+    width:         100rem;
 
     &__header {
-        color: white;
+        color:       white;
         font-family: 'neontubes';
-        font-size: 3rem;
+        font-size:   3rem;
+    }
+
+    &__main {
+
+        .nav {
+
+            &__button {
+                animation:        blink 5s linear infinite alternate,
+                                  blinkTwice 3s linear infinite;
+                background-color: #D043BE;
+                border:           none;
+                border-radius:    5px;
+                box-shadow:       0 0 0 transparent, 0 0 10px #D043BE, 0 0 20px #D043BE, 0 0 40px #D043BE, 0 0 100px #D043BE, 0 0 200px #D043BE, 0 0 300px #D043BE;
+                font-family:      neontubes;
+                font-size:        1.6rem;
+                height:           5rem;
+                width:            15rem;
+            }
+        }
     }
 }
