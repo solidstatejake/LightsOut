@@ -1,11 +1,13 @@
 import React from 'react';
-import GameContainer from './GameContainer';
+import LightsOut from './LightsOut';
 import './css/App.css';
 
 function App() {
   return (
     <div className='App'>
-      <GameContainer/>
+      <main className='main'>
+        <LightsOut/>
+      </main>
     </div>
   );
 }

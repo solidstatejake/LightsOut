@@ -5,4 +5,6 @@
 @import './base/base';
 
 /* Components */
+@import 'components/LightsOut';
+@import './components/GameOver';
 @import './components/Square.scss';

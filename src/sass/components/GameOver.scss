@@ -1,0 +1,16 @@
+.GameOver {
+    border-radius: 70px;
+    height: 80rem;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100rem;
+
+    &__header {
+        color: white;
+        font-family: 'neontubes';
+        font-size: 3rem;
+    }
+}
