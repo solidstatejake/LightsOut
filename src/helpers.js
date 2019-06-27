@@ -4,14 +4,14 @@ function generateSquareStateArray(val) {
   return masterArr;
 }
 
-function generateSquareIdArray() {
-  let squareIdArray = Array(25);
+function generateSquareCoordinatesArray() {
+  let squareCoordinatesArray = Array(25);
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 5; j++) {
-      squareIdArray[ (5 * i) + j ] = [ i, j ];
+      squareCoordinatesArray[ (5 * i) + j ] = [ i, j ];
     }
   }
-  return squareIdArray;
+  return squareCoordinatesArray;
 }
 
 function coordinatesToId(coordinates){
@@ -65,4 +65,4 @@ function flipSiblings(currentState, squareCoordinates) {
 
 
 
-export { generateSquareStateArray, generateSquareIdArray, flipSquare, flipSiblings };
+export { generateSquareStateArray, generateSquareCoordinatesArray, flipSquare, flipSiblings };

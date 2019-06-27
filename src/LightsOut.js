@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import GameBoard from './GameBoard';
 import GameOver from './GameOver';
 
-class LightsOut1 extends Component {
+class LightsOut extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      gameOver: false
+      gameOver: false,
     };
 
     this.updateGameOver = this.updateGameOver.bind(this);
@@ -38,4 +38,4 @@ class LightsOut1 extends Component {
   }
 }
 
-export default LightsOut1;
+export default LightsOut;

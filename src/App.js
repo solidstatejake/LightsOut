@@ -1,13 +1,13 @@
 import React from 'react';
-import LightsOut from './LightsOut';
+import GameBoard from './GameBoard';
 import './css/App.css';
-import GameBoard from "./GameBoard";
+import LightsOut from "./LightsOut";
 
 function App() {
   return (
     <div className='App'>
       <main className='main'>
-        <GameBoard/>
+        <LightsOut/>
       </main>
     </div>
   );
