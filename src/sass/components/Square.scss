@@ -1,14 +1,14 @@
 .Square {
-    height: 8rem;
-    width:  8rem;
+  height : 8rem;
+  width  : 8rem;
 
-    &--is-on {
-        background-color: #D043BE;
-        border:           1px solid #A043BE;
-    }
+  &--is-on {
+    background-color : #d043be;
+    border           : 1px solid #a043be;
+  }
 
-    &--is-off {
-        background-color: black;
-        border:           1px solid #1F1F1F;
-    }
+  &--is-off {
+    background-color : black;
+    border           : 1px solid #1f1f1f;
+  }
 }

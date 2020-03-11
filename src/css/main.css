@@ -1,120 +1,131 @@
 /* Abstacts */
 /* Base */
 html {
-  font-size: 62.5%; }
+  font-size : 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing : border-box; }
 
 /* Components */
 @font-face {
-  font-family: 'neontubes';
-  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
-  src: url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
+  font-family : "neontubes";
+  src         : url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+  src         : url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+  font-weight : normal;
+  font-style  : normal;
+}
 
 @keyframes buzz {
   70% {
-    opacity: 0.80; } }
+    opacity : 0.80; }
+}
 
 @keyframes blink {
   40% {
-    opacity: 1; }
+    opacity : 1; }
   42% {
-    opacity: 0.1; }
+    opacity : 0.1; }
   43% {
-    opacity: 1; } }
+    opacity : 1; }
+}
 
 @keyframes blinkTwice {
   40% {
-    opacity: 1; }
+    opacity : 1; }
   42% {
-    opacity: 0.8; }
+    opacity : 0.8; }
   43% {
-    opacity: 1; }
+    opacity : 1; }
   45% {
-    opacity: 0.2; }
+    opacity : 0.2; }
   46% {
-    opacity: 1; }
+    opacity : 1; }
   50% {
-    opacity: 0.8; }
+    opacity : 0.8; }
   51% {
-    opacity: 1; }
+    opacity : 1; }
   55% {
-    opacity: 0.2; }
+    opacity : 0.2; }
   56% {
-    opacity: 1; } }
+    opacity : 1; }
+}
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width : 1000px) {
   .main {
-    width: 400px;
-    font-size: 150px; }
+    width     : 400px;
+    font-size : 150px; }
+
   .main .socod {
-    font-size: 103px; } }
+    font-size : 103px; }
+}
 
 .LightsOut__header {
-  height: 13rem;
-  margin: 1.6rem auto;
-  position: relative;
-  text-align: center;
-  width: 60rem; }
-  .LightsOut__header .header {
-    animation: blink 5s linear infinite alternate, blinkTwice 3s linear infinite;
-    color: #FFD9E2;
-    font-family: 'neontubes';
-    font-size: 7rem;
-    left: 50%;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 0 0 0 transparent, 0 0 10px #FF003C, 0 0 20px #FF003C, 0 0 40px #FF003C, 0 0 100px #FF003C, 0 0 200px #FF003C, 0 0 300px #FF003C, 0 0 500px #FF003C, 0 0 1000px #FF003C;
-    width: 100%; }
+  height     : 13rem;
+  margin     : 1.6rem auto;
+  position   : relative;
+  text-align : center;
+  width      : 60rem; }
+
+.LightsOut__header .header {
+  animation   : blink 5s linear infinite alternate, blinkTwice 3s linear infinite;
+  color       : #ffd9e2;
+  font-family : "neontubes";
+  font-size   : 7rem;
+  left        : 50%;
+  margin      : 0;
+  position    : absolute;
+  top         : 50%;
+  transform   : translate(-50%, -50%);
+  text-shadow : 0 0 0 transparent, 0 0 10px #ff003c, 0 0 20px #ff003c, 0 0 40px #ff003c, 0 0 100px #ff003c, 0 0 200px #ff003c, 0 0 300px #ff003c, 0 0 500px #ff003c, 0 0 1000px #ff003c;
+  width       : 100%; }
 
 .LightsOut__game-container {
-  box-shadow: 0 0 0 transparent, 0 0 10px #D043BE, 0 0 20px #D043BE, 0 0 40px #D043BE, 0 0 100px #D043BE, 0 0 200px #D043BE, 0 0 300px #D043BE;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: auto;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  width: 41rem;
-  z-index: -1; }
+  box-shadow     : 0 0 0 transparent, 0 0 10px #d043be, 0 0 20px #d043be, 0 0 40px #d043be, 0 0 100px #d043be, 0 0 200px #d043be, 0 0 300px #d043be;
+  display        : flex;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  height         : auto;
+  left           : 50%;
+  position       : absolute;
+  transform      : translate(-50%, -50%);
+  top            : 50%;
+  width          : 41rem;
+  z-index        : -1; }
 
 .GameOver {
-  border-radius: 70px;
-  height: 80rem;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100rem; }
-  .GameOver__header {
-    color: white;
-    font-family: 'neontubes';
-    font-size: 3rem; }
-  .GameOver__main .nav__button {
-    animation: blink 5s linear infinite alternate, blinkTwice 3s linear infinite;
-    background-color: #D043BE;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 0 transparent, 0 0 10px #D043BE, 0 0 20px #D043BE, 0 0 40px #D043BE, 0 0 100px #D043BE, 0 0 200px #D043BE, 0 0 300px #D043BE;
-    font-family: neontubes;
-    font-size: 1.6rem;
-    height: 5rem;
-    width: 15rem; }
+  border-radius : 70px;
+  height        : 80rem;
+  left          : 50%;
+  position      : absolute;
+  text-align    : center;
+  top           : 50%;
+  transform     : translate(-50%, -50%);
+  width         : 100rem; }
+
+.GameOver__header {
+  color       : white;
+  font-family : "neontubes";
+  font-size   : 3rem; }
+
+.GameOver__main .nav__button {
+  animation        : blink 5s linear infinite alternate, blinkTwice 3s linear infinite;
+  background-color : #d043be;
+  border           : none;
+  border-radius    : 5px;
+  box-shadow       : 0 0 0 transparent, 0 0 10px #d043be, 0 0 20px #d043be, 0 0 40px #d043be, 0 0 100px #d043be, 0 0 200px #d043be, 0 0 300px #d043be;
+  font-family      : neontubes;
+  font-size        : 1.6rem;
+  height           : 5rem;
+  width            : 15rem; }
 
 .Square {
-  height: 8rem;
-  width: 8rem; }
-  .Square--is-on {
-    background-color: #D043BE;
-    border: 1px solid #A043BE; }
-  .Square--is-off {
-    background-color: black;
-    border: 1px solid #1F1F1F; }
+  height : 8rem;
+  width  : 8rem; }
+
+.Square--is-on {
+  background-color : #d043be;
+  border           : 1px solid #a043be; }
+
+.Square--is-off {
+  background-color : black;
+  border           : 1px solid #1f1f1f; }

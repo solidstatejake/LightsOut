@@ -1,57 +1,57 @@
-@import '../abstracts/_typography.scss';
-@import '../abstracts/_animations.scss';
+@import "../abstracts/_typography.scss";
+@import "../abstracts/_animations.scss";
 
 .LightsOut {
-    &__header {
-        height:     13rem;
-        margin:     1.6rem auto;
-        position:   relative;
-        text-align: center;
-        width:      60rem;
+  &__header {
+    height     : 13rem;
+    margin     : 1.6rem auto;
+    position   : relative;
+    text-align : center;
+    width      : 60rem;
 
-        .header {
-            animation:   blink 5s linear infinite alternate,
-                         blinkTwice 3s linear infinite;
-            color:       #FFD9E2;
-            font-family: 'neontubes';
-            font-size:   7rem;
-            left:        50%;
-            margin:      0;
-            position:    absolute;
-            top:         50%;
-            transform:   translate(-50%, -50%);
-            text-shadow: 0 0 0 transparent,
-                         0 0 10px #FF003C,
-                         0 0 20px #FF003C,
-                         0 0 40px #FF003C,
-                         0 0 100px #FF003C,
-                         0 0 200px #FF003C,
-                         0 0 300px #FF003C,
-                         0 0 500px #FF003C,
-                         0 0 1000px #FF003C;
-            width:       100%;
-        }
+    .header {
+      animation   : blink 5s linear infinite alternate,
+      blinkTwice 3s linear infinite;
+      color       : #ffd9e2;
+      font-family : "neontubes";
+      font-size   : 7rem;
+      left        : 50%;
+      margin      : 0;
+      position    : absolute;
+      top         : 50%;
+      transform   : translate(-50%, -50%);
+      text-shadow : 0 0 0 transparent,
+      0 0 10px #ff003c,
+      0 0 20px #ff003c,
+      0 0 40px #ff003c,
+      0 0 100px #ff003c,
+      0 0 200px #ff003c,
+      0 0 300px #ff003c,
+      0 0 500px #ff003c,
+      0 0 1000px #ff003c;
+      width       : 100%;
     }
+  }
 
-    &__game-container {
-        box-shadow:     0 0 0 transparent,
-                        0 0 10px #D043BE,
-                        0 0 20px #D043BE,
-                        0 0 40px #D043BE,
-                        0 0 100px #D043BE,
-                        0 0 200px #D043BE,
-                        0 0 300px #D043BE;
-        //0 0 500px #D043BE;
-        //0 0 1000px #D043BE;
-        display:        flex;
-        flex-direction: row;
-        flex-wrap:      wrap;
-        height:         auto;
-        left:           50%;
-        position:       absolute;
-        transform:      translate(-50%, -50%);
-        top:            50%;
-        width:          41rem;
-        z-index:        -1;
-    }
+  &__game-container {
+    box-shadow     : 0 0 0 transparent,
+    0 0 10px #d043be,
+    0 0 20px #d043be,
+    0 0 40px #d043be,
+    0 0 100px #d043be,
+    0 0 200px #d043be,
+    0 0 300px #d043be;
+    //0 0 500px #D043BE;
+    //0 0 1000px #D043BE;
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    height         : auto;
+    left           : 50%;
+    position       : absolute;
+    transform      : translate(-50%, -50%);
+    top            : 50%;
+    width          : 41rem;
+    z-index        : -1;
+  }
 }

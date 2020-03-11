@@ -1,16 +1,16 @@
 .App {
-  background-color: black;
-  height: 100vh;
-  width: 100vw;
+  background-color : black;
+  height           : 100vh;
+  width            : 100vw;
 }
 
 .App .main {
 
-  width: 83rem;
-  height: 75rem;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%,-50%);
+  width     : 83rem;
+  height    : 75rem;
+  top       : 50%;
+  left      : 50%;
+  position  : absolute;
+  transform : translate(-50%, -50%);
 
 }

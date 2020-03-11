@@ -1,16 +1,16 @@
-import React from 'react';
-import GameBoard from './GameBoard';
-import './css/App.css';
-import LightsOut from "./LightsOut";
+import React     from 'react'
+import LightsOut from './LightsOut'
+import './css/App.css'
 
-function App() {
+
+const App = () => {
   return (
     <div className='App'>
       <main className='main'>
         <LightsOut/>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

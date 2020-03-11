@@ -1,58 +1,58 @@
 @keyframes buzz {
-    70% {
-        opacity: 0.80;
-    }
+  70% {
+    opacity : 0.80;
+  }
 }
 
 @keyframes blink {
-    40% {
-        opacity: 1;
-    }
-    42% {
-        opacity: 0.1;
-    }
-    43% {
-        opacity: 1;
-    }
+  40% {
+    opacity : 1;
+  }
+  42% {
+    opacity : 0.1;
+  }
+  43% {
+    opacity : 1;
+  }
 }
 
 @keyframes blinkTwice {
-    40% {
-        opacity: 1;
-    }
-    42% {
-        opacity: 0.8;
-    }
-    43% {
-        opacity: 1;
-    }
-    45% {
-        opacity: 0.2;
-    }
-    46% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    51% {
-        opacity: 1;
-    }
-    55% {
-        opacity: 0.2;
-    }
-    56% {
-        opacity: 1;
-    }
+  40% {
+    opacity : 1;
+  }
+  42% {
+    opacity : 0.8;
+  }
+  43% {
+    opacity : 1;
+  }
+  45% {
+    opacity : 0.2;
+  }
+  46% {
+    opacity : 1;
+  }
+  50% {
+    opacity : 0.8;
+  }
+  51% {
+    opacity : 1;
+  }
+  55% {
+    opacity : 0.2;
+  }
+  56% {
+    opacity : 1;
+  }
 }
 
-@media screen and (min-width: 1000px) {
-    .main {
-        width:     400px;
-        font-size: 150px;
-    }
+@media screen and (min-width : 1000px) {
+  .main {
+    width     : 400px;
+    font-size : 150px;
+  }
 
-    .main .socod {
-        font-size: 103px;
-    }
+  .main .socod {
+    font-size : 103px;
+  }
 }

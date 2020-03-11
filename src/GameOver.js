@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
 
 class GameOver extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
-    this.handleRestartGame = this.handleRestartGame.bind(this);
+    this.handleRestartGame = this.handleRestartGame.bind(this)
   }
 
-  handleRestartGame() {
-    this.props.restartGame();
+  handleRestartGame () {
+    this.props.restartGame()
   }
 
-  render() {
+  render () {
     return (
       <div className="GameOver">
 
@@ -29,8 +30,8 @@ class GameOver extends Component {
         </main>
 
       </div>
-    );
+    )
   }
 }
 
-export default GameOver;
+export default GameOver
